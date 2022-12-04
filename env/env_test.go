@@ -377,7 +377,7 @@ func Test_env_load(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			e := &env{
-				prefixs: tt.fields.prefixs,
+				prefixes: tt.fields.prefixs,
 			}
 			got := e.load(tt.args.envStrings)
 			if !reflect.DeepEqual(tt.want, got) {
